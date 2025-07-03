@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        margin-top: 50px;
+        width: 80%;
+        height: 52vh;
+        background-color: #BABBB8;
+        padding: 7px;
+        border-radius: 13px;
+      }
+      .function-keys {
+        font-size: x-small;
+        display: flex;
+        width: 100%;
+      }
+      .num-keys,
+      .asdf,
+      .qwer,
+      .zxcv,
+      .ctrl {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .keys {
+        height: 25px;
+        width: 50px;
+        background: #302f2f;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      .empty {
+        width: 50px;
+        height: 25px;
+      }
+      .rightPlus {
+        position: fixed;
+        width: 50px;
+        height: 105px !important;
+        top: 152px;
+        left: 1167px;
+      }
+
+      .num-keys .keys {
+        height: 50px;
+        width: 50px;
+      }
+      .asdf .keys,
+      .qwer .keys,
+      .zxcv .keys,
+      .ctrl .keys {
+        height: 50px;
+        width: 50px;
+      }
+      .bksp {
+        /* width: 80px; */
+        padding-left: 30px;
+      }
+
+      .enter {
+        /* width: 80px; */
+        padding-left: 37px;
+        padding-right: 7px;
+      }
+      .shift {
+        padding-right: 50px;
+      }
+      .rightShift {
+        padding-left: 50px;
+        padding-right: 19px;
+      }
+      .tab {
+        /* width: 70px; */
+        padding-right: 30px;
+      }
+
+      .caps {
+        /* width: 80px; */
+        padding-right: 40px;
+      }
+      .backSlash {
+        /* width: 80px; */
+        padding-left: 18px;
+      }
+
+      .spacebar {
+        padding-left: 120px;
+        padding-right: 120px;
+      }
+      .rightEnter {
+        position: fixed;
+        width: 50px;
+        height: 105px !important;
+        top: 264px;
+        left: 1167px;
+      }
+      .upDown {
+        height: 25px;
+        width: 50px;
+        background: #302f2f;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        top: 320px;
+        left: 873px;
+      }
+      .upDown2 {
+        height: 25px;
+        width: 50px;
+        background: #302f2f;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        top: 344px;
+        left: 873px;
+        border-top: 1px solid #bbb8b8;
+      }
+      .zero {
+        padding-left: 58px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="function-keys">
+        <div class="keys">ESC</div>
+        <div class="keys">F1</div>
+        <div class="keys">F2</div>
+        <div class="keys">F3</div>
+        <div class="keys">F4</div>
+        <div class="keys">F5</div>
+        <div class="keys">F6</div>
+        <div class="keys">F7</div>
+        <div class="keys">F8</div>
+        <div class="keys">F9</div>
+        <div class="keys">F10</div>
+        <div class="keys">F11</div>
+        <div class="keys">F12</div>
+        <div class="keys">PRT SC</div>
+        <div class="keys">O</div>
+        <div class="keys">DELETE</div>
+        <div class="keys">HOME</div>
+        <div class="keys">END</div>
+        <div class="keys">PG UP</div>
+        <div class="keys">PD DN</div>
+      </div>
+
+      <div class="num-keys">
+        <div class="keys">`</div>
+        <div class="keys">1</div>
+        <div class="keys">2</div>
+        <div class="keys">3</div>
+        <div class="keys">4</div>
+        <div class="keys">5</div>
+        <div class="keys">6</div>
+        <div class="keys">7</div>
+        <div class="keys">8</div>
+        <div class="keys">9</div>
+        <div class="keys">0</div>
+        <div class="keys">-</div>
+        <div class="keys">=</div>
+        <div class="keys bksp">BKSP</div>
+        <div class="keys">NUM</div>
+        <div class="keys">/</div>
+        <div class="keys">*</div>
+        <div class="keys">-</div>
+      </div>
+
+      <div class="qwer">
+        <div class="keys tab">TAB</div>
+        <div class="keys">Q</div>
+        <div class="keys">W</div>
+        <div class="keys">E</div>
+        <div class="keys">R</div>
+        <div class="keys">T</div>
+        <div class="keys">Y</div>
+        <div class="keys">I</div>
+        <div class="keys">O</div>
+        <div class="keys">P</div>
+        <div class="keys">[</div>
+        <div class="keys">]</div>
+        <div class="keys backSlash">\</div>
+        <div class="keys">7</div>
+        <div class="keys">8</div>
+        <div class="keys">9</div>
+        <div class="empty"></div>
+        <div class="keys rightPlus">+</div>
+      </div>
+
+      <div class="asdf">
+        <div class="keys caps">CAPS</div>
+        <div class="keys">A</div>
+        <div class="keys">S</div>
+        <div class="keys">D</div>
+        <div class="keys">F</div>
+        <div class="keys">G</div>
+        <div class="keys">H</div>
+        <div class="keys">J</div>
+        <div class="keys">K</div>
+        <div class="keys">L</div>
+        <div class="keys">;</div>
+        <div class="keys">'</div>
+        <div class="keys enter">ENTER</div>
+        <div class="keys">4</div>
+        <div class="keys">5</div>
+        <div class="keys">6</div>
+        <div class="empty"></div>
+      </div>
+
+      <div class="zxcv">
+        <div class="keys shift">SHIFT</div>
+        <div class="keys">Z</div>
+        <div class="keys">X</div>
+        <div class="keys">C</div>
+        <div class="keys">V</div>
+        <div class="keys">B</div>
+        <div class="keys">N</div>
+        <div class="keys">M</div>
+        <div class="keys">,</div>
+        <div class="keys">.</div>
+        <div class="keys">/</div>
+        <div class="keys rightShift">SHIFT</div>
+
+        <div class="keys">1</div>
+        <div class="keys">2</div>
+        <div class="keys">3</div>
+        <div class="empty"></div>
+        <div class="keys rightEnter">ENTER</div>
+      </div>
+
+      <div class="ctrl">
+        <div class="keys">CTRL</div>
+        <div class="keys">FN</div>
+        <div class="keys">⊞</div>
+        <div class="keys">ALT</div>
+        <div class="keys spacebar">SPACEBAR</div>
+        <div class="keys">ALT GR</div>
+
+        <div class="keys">CTRL</div>
+
+        <div class="keys">←</div>
+        <div class="upDown">↑</div>
+        <div class="upDown2">↓</div>
+        <div class="empty"></div>
+        <div class="keys">→</div>
+        <div class="keys zero">0</div>
+        <div class="keys">.</div>
+        <div class="empty"></div>
+        <div class="keys rightEnter">ENTER</div>
+      </div>
+    </div>
+  </body>
+</html>
