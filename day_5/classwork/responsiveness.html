@@ -111,6 +111,17 @@
         justify-content: center;
         align-items: center;
       }
+
+      @media(max-width:1000px) {
+        
+      #parent {
+        grid-template-columns: repeat(3, 1fr);
+      }
+         #parent > div:nth-child(5) {
+        background: white;
+       
+      }
+      }
     </style>
   </head>
   <body>
