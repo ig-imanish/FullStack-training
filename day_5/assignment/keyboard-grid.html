@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keyword using grid</title>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .keyboardConatiner {
+        display: flex;
+        width: 80%;
+        height: 300px;
+        border: 1px solid #0e0e0e;
+        background: #9e9b9b;
+        padding: 10px;
+        gap: 5px;
+        margin: 150px auto;
+      }
+
+      .right {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 20px repeat(5, 1fr);
+        gap: 8px;
+        padding-top: 5px;
+      }
+
+      .keys {
+        background-color: #0e0e0e;
+        border: 1px solid #ccc;
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .left {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+      }
+      .left .keys {
+        width: 50px;
+        height: 48px;
+      }
+      .left .top,
+      .left .secondRow,
+      .left .thirdRow,
+      .left .fourthRow,
+      .left .fifthRow,
+      .left .sixthRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .left .top {
+        gap: 5px;
+      }
+      .top .prt {
+        width: 60px;
+      }
+      .top > .keys {
+        height: 25px;
+      }
+
+      .secondRow .backspace {
+        width: 90px;
+      }
+      .thirdRow .tab {
+        width: 75px;
+      }
+      .fourthRow .caps {
+        width: 90px;
+      }
+      .fourthRow .enter {
+        width: 110px;
+      }
+      .fifthRow .shiftLeft {
+        width: 120px;
+      }
+      .fifthRow .shiftRight {
+        width: 150px;
+      }
+      .sixthRow .space {
+        width: 300px;
+      }
+      .right .top {
+        margin-top: -5px;
+      }
+
+      .right .keys {
+        padding: 0px 8px;
+      }
+      .right .pg {
+        padding: 0px;
+      }
+      .pluse {
+        grid-area: 3/4/5/5;
+      }
+      .specialEnter {
+        grid-area: 5/4/7/5;
+      }
+      .zero {
+        grid-area: 6/1/7/3;
+      }
+      .topkey {
+        font-size: 12px;
+      }
+      .arrow {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .arrow span {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .arrowUp {
+        border-bottom: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyboardConatiner">
+      <div class="left">
+        <div class="top">
+          <div class="keys topkey">ESC</div>
+          <div class="keys topkey">F1</div>
+          <div class="keys topkey">F2</div>
+          <div class="keys topkey">F3</div>
+          <div class="keys topkey">F4</div>
+          <div class="keys topkey">F5</div>
+          <div class="keys topkey">F6</div>
+          <div class="keys topkey">F7</div>
+          <div class="keys topkey">F8</div>
+          <div class="keys topkey">F9</div>
+          <div class="keys topkey">F10</div>
+          <div class="keys topkey">F11</div>
+          <div class="keys topkey">F12</div>
+          <div class="keys topkey prt">PRT SC</div>
+          <div class="keys topkey">ON</div>
+          <div class="keys topkey">DEL</div>
+        </div>
+
+        <div class="secondRow">
+          <div class="keys">~</div>
+          <div class="keys">1</div>
+          <div class="keys">2</div>
+          <div class="keys">3</div>
+          <div class="keys">4</div>
+          <div class="keys">5</div>
+          <div class="keys">6</div>
+          <div class="keys">7</div>
+          <div class="keys">8</div>
+          <div class="keys">9</div>
+          <div class="keys">0</div>
+          <div class="keys">-</div>
+          <div class="keys">=</div>
+          <div class="keys backspace">BKSP</div>
+        </div>
+        <div class="thirdRow">
+          <div class="keys tab">TAB</div>
+          <div class="keys">Q</div>
+          <div class="keys">W</div>
+          <div class="keys">E</div>
+          <div class="keys">R</div>
+          <div class="keys">T</div>
+          <div class="keys">Y</div>
+          <div class="keys">U</div>
+          <div class="keys">I</div>
+          <div class="keys">O</div>
+          <div class="keys">P</div>
+          <div class="keys">[</div>
+          <div class="keys">]</div>
+          <div class="keys">\</div>
+        </div>
+        <div class="fourthRow">
+          <div class="keys caps">CAPS</div>
+          <div class="keys">A</div>
+          <div class="keys">S</div>
+          <div class="keys">D</div>
+          <div class="keys">F</div>
+          <div class="keys">G</div>
+          <div class="keys">H</div>
+          <div class="keys">J</div>
+          <div class="keys">K</div>
+          <div class="keys">L</div>
+          <div class="keys">;</div>
+          <div class="keys">'</div>
+          <div class="keys enter">ENTER</div>
+        </div>
+        <div class="fifthRow">
+          <div class="keys shiftLeft">SHIFT</div>
+          <div class="keys">Z</div>
+          <div class="keys">X</div>
+          <div class="keys">C</div>
+          <div class="keys">V</div>
+          <div class="keys">B</div>
+          <div class="keys">N</div>
+          <div class="keys">M</div>
+          <div class="keys">,</div>
+          <div class="keys">.</div>
+          <div class="keys">/</div>
+          <div class="keys shiftRight">SHIFT</div>
+        </div>
+        <div class="sixthRow">
+          <div class="keys">CTRL</div>
+          <div class="keys">FN</div>
+          <div class="keys">⊞</div>
+          <div class="keys">ALT</div>
+          <div class="keys space">SPACE</div>
+          <div class="keys">ALT GR</div>
+          <div class="keys">CTRL</div>
+          <div class="keys">←</div>
+          <div class="keys arrow">
+            <span class="arrowUp">↑</span>
+            <span class="arrowDown">↓</span>
+          </div>
+          <div class="keys">→</div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="keys top topkey">HOME</div>
+        <div class="keys top topkey">END</div>
+        <div class="keys top topkey pg">PG UP</div>
+        <div class="keys top topkey pg">PG DN</div>
+
+        <div class="keys">NUM</div>
+        <div class="keys">/</div>
+        <div class="keys">*</div>
+        <div class="keys">-</div>
+
+        <div class="keys">7</div>
+        <div class="keys">8</div>
+        <div class="keys">9</div>
+        <div class="keys pluse">+</div>
+
+        <div class="keys">4</div>
+        <div class="keys">5</div>
+        <div class="keys">6</div>
+
+        <div class="keys">1</div>
+        <div class="keys">2</div>
+        <div class="keys">3</div>
+        <div class="keys specialEnter">⤶</div>
+
+        <div class="keys zero">0</div>
+        <div class="keys">.</div>
+      </div>
+    </div>
+  </body>
+</html>
