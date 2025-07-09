@@ -45,7 +45,7 @@ let str = "Manish Kumar";
 // }
 // let arr = [2,3,5,5]
 for (let key in obj) {
-  if (typeof obj[key] == "string") {
+  if (typeof (obj[key]) == "string") {
     console.log(obj[key]);
   }
 }
