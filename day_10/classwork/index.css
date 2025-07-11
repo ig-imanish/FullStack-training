@@ -1,8 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 #navbar{
     height: 100px;
     background-color: gray;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #navbar>nav>ul{
@@ -34,6 +40,16 @@
 .product-box>img:hover{
     animation: rotate 2s linear infinite; 
     cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 @keyframes rotate {
@@ -85,10 +101,11 @@ input, select{
 .loader {
     width: 60px;
     height: 60px;
+        border-radius: 50%;
+
     border: 6px solid rgba(0, 0, 0, 0.2);
     border-right: 6px solid #3498db;
     border-left: 6px solid #3498db;
-    /* border-radius: 50%; */
     animation: spin 1s linear infinite, glow 0.5s alternate-reverse infinite  ;
 }
 /* Keyframes for rotation */

@@ -22,7 +22,6 @@ const myPromise = async () => {
     const response = await res.json();
     data = response;
 
-    
     document.querySelector(".loader-container").style.display = "none";
     renderProducts(data);
   } catch (error) {
@@ -60,14 +59,14 @@ function renderProducts(arr) {
     img.src = el.image;
 
     let name = document.createElement("p");
-    name.innerText = el.name;
+    name.innerText = el.title;
     // console.log(el.name)
 
     let price = document.createElement("p");
     price.innerText = `Price: $${el.price}`;
 
     let rating = document.createElement("p");
-    rating.innerText = `Rating: ${el.rating}`;
+    rating.innerText = `Rating: ${el.rating.rate} | Count: ${el.rating.count}`;
 
     let button = document.createElement("button");
     button.innerText = "Add to Cart";
@@ -91,7 +90,7 @@ function handleSearch() {
 
     let searchTerm = searchInput.value.toLowerCase();
     let filteredProducts = data.filter((product) => {
-      return product.name.toLowerCase().includes(searchTerm);
+      return product.title.toLowerCase().includes(searchTerm);
     });
     renderProducts(filteredProducts);
   }, 3000);
@@ -148,7 +147,7 @@ function addToCart(product) {
   }
   cart.push(product);
   localStorage.setItem("CartData", JSON.stringify(cart));
-  alert(`${product.name} added to cart!`);
+  alert(`${product.title} added to cart!`);
   console.log("Cart:", cart);
 }
 
