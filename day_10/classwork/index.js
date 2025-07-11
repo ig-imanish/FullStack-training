@@ -13,14 +13,14 @@
 //   console.log("I am inside setTimeout() - 0ms");
 // }, 0);
 
-let apiUrl = "https://fakestoreapi.in/api/products";
+let apiUrl = "https://fakestoreapi.com/products";
 let data = [];
 
 const myPromise = async () => {
   try {
     const res = await fetch(apiUrl);
     const response = await res.json();
-    data = response.products;
+    data = response;
 
     
     document.querySelector(".loader-container").style.display = "none";
@@ -45,6 +45,7 @@ function renderProducts(arr) {
     console.log("No data to render");
     return;
   }
+  console.log(arr);
 
   productsContainer.innerHTML = "";
 
@@ -60,6 +61,7 @@ function renderProducts(arr) {
 
     let name = document.createElement("p");
     name.innerText = el.name;
+    // console.log(el.name)
 
     let price = document.createElement("p");
     price.innerText = `Price: $${el.price}`;
