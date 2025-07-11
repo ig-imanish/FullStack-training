@@ -4,9 +4,10 @@
 }
 
 #navbar{
-    height: 100px;
-    background-color: gray;
+    height: 60px;
+    background-color: #131921;
     display: flex;
+    color: white;
     justify-content: space-between;
     align-items: center;
 }
@@ -43,7 +44,7 @@
 }
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .navbar {
     width: 100%;
@@ -52,27 +53,31 @@ a {
 
 }
 
-@keyframes rotate {
+/* @keyframes rotate {
     from {
       transform: rotate(0deg);
     }
     to {
       transform: rotate(360deg);
     }
-  }
-
+  } */
+#sorting{
+    display: flex;
+    justify-content: space-around;
+}
 .product-box>button{
     width: 50%;
     padding: 10px;
     border: none;
-    background-color: rgb(165, 185, 185);
+    background-color: #FFCE12;
     color: black;
+    border-radius: 7px;
     transition: transform  0.3s ease-in;
 }
 
 .product-box>button:hover{
     cursor: pointer;
-    background-color: aquamarine;
+    background-color: #e6b801;
     transform: scale(1.1);
 }
 
@@ -84,7 +89,7 @@ a {
 }
 
 input, select{
-    padding: 8px;
+    padding: 8px 46px;
     margin-bottom: 10px;
     margin-top: 10px;
 }

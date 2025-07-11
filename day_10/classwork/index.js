@@ -81,6 +81,7 @@ function renderProducts(arr) {
 
 function handleSearch() {
   clearTimeout(debounceTimer);
+  document.querySelector(".loader-container").style.display = "";
   debounceTimer = setTimeout(() => {
     // Check if data is available
     if (!data || !Array.isArray(data)) {
@@ -93,6 +94,7 @@ function handleSearch() {
       return product.title.toLowerCase().includes(searchTerm);
     });
     renderProducts(filteredProducts);
+    document.querySelector(".loader-container").style.display = "none";
   }, 3000);
 }
 
@@ -149,6 +151,7 @@ function addToCart(product) {
   localStorage.setItem("CartData", JSON.stringify(cart));
   alert(`${product.title} added to cart!`);
   console.log("Cart:", cart);
+
 }
 
 searchInput.addEventListener("input", handleSearch);

@@ -1,5 +1,7 @@
 let CartData = JSON.parse(localStorage.getItem("CartData"));
+// localStorage.setItem("test", "hi");
 
+// console.log(localStorage.getItem("test"));
 console.log(CartData);
 
 function showData(data) {
@@ -22,7 +24,6 @@ function showData(data) {
 
     let name = document.createElement("p");
     name.innerText = el.title;
-    // console.log(el.name)
 
     let price = document.createElement("p");
     price.innerText = `Price: $${el.price}`;
@@ -41,6 +42,7 @@ function showData(data) {
 }
 showData(CartData);
 function deleteFun(el, index) {
+    console.log(index)
   deletedCartData = CartData.splice(index, 1);
   console.log(deletedCartData);
   localStorage.setItem("CartData", JSON.stringify(CartData));
