@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="navbar">
+        <h2>Logo</h2>
+        <h2>Products</h2>
+        <nav>
+            <ul>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li onclick="cartPage()">Cart</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="sorting">
+        <input type="search" id="search" placeholder="Search products...">
+
+        <select id="sort">
+            <option value="select">Select</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+            <option value="ratingHighLow">Rating: High to Low</option>
+            <option value="ratingLowHigh">Rating: Low to High</option>
+
+        </select>
+
+        <select id="filter">
+            <option value="all">All Categories</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Wearable">Wearable</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+    </div>
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <div id="products">
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+#navbar{
+    height: 100px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar>nav>ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#navbar>nav>ul:hover{
+    cursor: pointer;
+}
+
+.product-box{
+    border: 1px solid gray;
+    text-align: center;
+    padding: 20px;
+}
+
+.product-box>img{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+    /* border-radius: 100%; */
+}
+
+.product-box>img:hover{
+    animation: rotate 2s linear infinite; 
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.product-box>button{
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(165, 185, 185);
+    color: black;
+    transition: transform  0.3s ease-in;
+}
+
+.product-box>button:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+    transform: scale(1.1);
+}
+
+#products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+}
+
+input, select{
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Loader */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #100e0e;
+}
+/* Loader Animation */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+    border-right: 6px solid #3498db;
+    border-left: 6px solid #3498db;
+    /* border-radius: 50%; */
+    animation: spin 1s linear infinite, glow 0.5s alternate-reverse infinite  ;
+}
+/* Keyframes for rotation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 1px 0 5px rgba(52, 152, 219, 0.5); }
+    100% { box-shadow: 0 0 30px rgba(52, 152, 219, 1); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
