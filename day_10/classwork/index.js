@@ -37,6 +37,7 @@ let filterSelect = document.getElementById("filter");
 let productsContainer = document.getElementById("products");
 let cart = JSON.parse(localStorage.getItem("CartData")) || [];
 
+
 let debounceTimer;
 
 function renderProducts(arr) {
@@ -113,9 +114,9 @@ function handleSort() {
   } else if (sortBy === "priceHighLow") {
     sortedProducts.sort((a, b) => b.price - a.price);
   } else if (sortBy === "ratingHighLow") {
-    sortedProducts.sort((a, b) => b.rating - a.rating);
+    sortedProducts.sort((a, b) => b.rating.rate - a.rating.rate);
   } else if (sortBy === "ratingLowHigh") {
-    sortedProducts.sort((a, b) => a.rating - b.rating);
+    sortedProducts.sort((a, b) => a.rating.rate - b.rating.rate);
   }
 
   renderProducts(sortedProducts);
@@ -144,21 +145,27 @@ function handleFilter() {
 function addToCart(product) {
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].id == product.id) {
-      return alert(`${cart[i].name} is already added in cart`);
+      cart[i].quantity = (cart[i].quantity || 1) + 1;
+      localStorage.setItem("CartData", JSON.stringify(cart));
+      alert(`${cart[i].title} quantity increased in cart!`);
+      return;
     }
   }
+
+  product.quantity = 1;
   cart.push(product);
   localStorage.setItem("CartData", JSON.stringify(cart));
   alert(`${product.title} added to cart!`);
   console.log("Cart:", cart);
-
 }
 
-searchInput.addEventListener("input", handleSearch);
-sortSelect.addEventListener("change", handleSort);
-filterSelect.addEventListener("change", handleFilter);
+function deleteFun(index) {
+  console.log(index);
+  cart.splice(index, 1);
+  localStorage.setItem("CartData", JSON.stringify(cart));
+}
 
-// Remove the setTimeout as data is now rendered when loaded
+filterSelect.addEventListener("change", handleFilter);
 
 function cartPage() {
   window.location.href = "cart.html";

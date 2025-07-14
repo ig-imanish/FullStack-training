@@ -9,7 +9,7 @@ function showData(data) {
   productsContainer.innerHTML = "";
 
   if (data.length === 0) {
-    productsContainer.innerHTML = "<h2>Cart is empty</h2>";
+    productsContainer.innerHTML = "<h2>Cart is empty ;)</h2>";
     return;
   }
   data.forEach((el, index) => {
@@ -43,8 +43,8 @@ function showData(data) {
 showData(CartData);
 function deleteFun(el, index) {
     console.log(index)
-  deletedCartData = CartData.splice(index, 1);
-  console.log(deletedCartData);
+  CartData.splice(index, 1);
+  console.log("Deleted" + el.title);
   localStorage.setItem("CartData", JSON.stringify(CartData));
   showData(CartData);
 }
