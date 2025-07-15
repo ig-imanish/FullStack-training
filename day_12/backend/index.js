@@ -1,5 +1,7 @@
+const fs = require("fs");
+
 const express = require("express");
-let data = require("./data.json");
+// let data = require("./data.json");
 
 const app = express();
 const PORT = 8080;
@@ -9,8 +11,16 @@ app.get("/", (req, res) => {
   res.status(200).send("<h1>Hii from server!<h1/>");
 });
 
-app.get("/products", (req, res) => {
-  res.status(200).send(data);
+app.get("/show", (req, res) => {
+  fs.readFile("data.txt", "utf8", (err, data) => {
+    res.status(200).send(data);
+  });
+});
+
+app.get("/update", (_, res) => {
+  fs.writeFile("data.txt", "Hello, World!", "utf8", (err) => {
+    res.status(200).send("Updated");
+  });
 });
 
 app.listen(PORT, () => {
