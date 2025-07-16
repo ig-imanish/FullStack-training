@@ -11,15 +11,27 @@ app.get("/", (req, res) => {
   res.status(200).send("<h1>Hii from server!<h1/>");
 });
 
-app.get("/show", (req, res) => {
+app.get("/read", (req, res) => {
   fs.readFile("data.txt", "utf8", (err, data) => {
     res.status(200).send(data);
   });
 });
 
-app.get("/update", (_, res) => {
+app.get("/write", (_, res) => {
   fs.writeFile("data.txt", "Hello, World!", "utf8", (err) => {
     res.status(200).send("Updated");
+  });
+});
+
+app.get("/delete", (req, res) => {
+  fs.unlink("data.txt", (err) => {
+    res.status(200).send("deleted");
+  });
+});
+
+app.get("/append", (req, res) => {
+  fs.appendFile("data.txt", "\nHow are you?", "utf8", (err) => {
+    res.status(200).send("append");
   });
 });
 
