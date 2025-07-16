@@ -1,8 +1,8 @@
 let user = {
-    name: "manish",
-    age : 19,
-    clg: "RBIENT",
-    rollNumber: 2305544
-}
-
-export {user};
+  id: 0,
+  name: "",
+  age: 0,
+  clg: "",
+  rollNumber: 0,
+};
+export { user };

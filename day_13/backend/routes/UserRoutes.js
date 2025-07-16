@@ -1,4 +1,5 @@
 const showDataRoute = "/show";
 const updateDataRoute = "/update";
-
-export { showDataRoute, updateDataRoute };
+const createDataRoute = "/create";
+const deleteDataRoute = "/delete";
+export { showDataRoute, updateDataRoute, createDataRoute , deleteDataRoute};

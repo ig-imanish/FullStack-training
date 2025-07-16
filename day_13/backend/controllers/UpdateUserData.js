@@ -7,8 +7,10 @@ function updateUserData(app) {
     // } else {
     //   user.name = "Default";
     // }
-
-    user.name = "No Name";
+    user.name = "Tony stark";
+    user.age = 53;
+    user.clg = "MIT";
+    user.rollNumber = 3000;
     res.status(200).send(user);
   });
 }
