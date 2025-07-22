@@ -52,7 +52,7 @@ const userLogin = async (req, res) => {
     bcrypt.compare(password, userExist.password, (err, result) => {
       const token = jwt.sign(
         {
-          data: userExist._id,
+          userId: userExist._id,
         },
         "secret",
         { expiresIn: "5h" }

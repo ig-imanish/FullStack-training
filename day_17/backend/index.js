@@ -1,17 +1,17 @@
 // const cowsay = require("cowsay");
-
 // console.log(cowsay.say({ text: "hi" }));
 
 import express from "express";
 import { connection } from "./configs/db.js";
 import { PORT } from "./configs/Config.js";
 import userRoute from "./routes/user.route.js";
+import productRoute from "./routes/product.route.js";
 
 const app = express();
 
 // Middleware to parse JSON
 app.use(express.json());
-
+app.use(productRoute)
 app.use(userRoute);
 
 app.listen(PORT, async () => {
