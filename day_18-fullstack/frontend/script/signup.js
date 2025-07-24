@@ -32,13 +32,24 @@ form.addEventListener("submit", async (e) => {
 
     const res = await response.json();
     console.log(res);
-  if( response.status === 200) {
+    if (response.status === 200) {
       Toastify({
         text: res.message,
         duration: 3000,
         gravity: "top",
         position: "right",
         backgroundColor: "green",
+      }).showToast();
+
+      window.location.href =
+        "http://localhost:5500/day_18-fullstack/frontend/login.html";
+    } else {
+      Toastify({
+        text: res.error,
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "red",
       }).showToast();
     }
   } catch (error) {

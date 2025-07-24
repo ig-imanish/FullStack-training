@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./styles/login.css" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./styles/products.css">
+    <title>Products</title>
+  </head>
+  <body>
+    <div id="parent">
+      <form action="" id="form">
+        <div class="form-column">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              id="title"
+              placeholder="Enter product title..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="brand">Brand</label>
+            <input type="text" id="brand" placeholder="Enter brand name..." />
+          </div>
+
+          <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="text" id="image" placeholder="Enter image URL..." />
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" id="price" placeholder="Enter price..." />
+          </div>
+        </div>
+
+        <div class="form-column">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input
+              type="text"
+              id="description"
+              placeholder="Enter description..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="rating">Rating</label>
+            <input
+              type="number"
+              id="rating"
+              placeholder="Enter rating (1-5)..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" id="category" placeholder="Enter category..." />
+          </div>
+        </div>
+
+        <button type="submit" id="btn">Create Product</button>
+      </form>
+    </div>
+
+    <div id="productData"></div>
+  </body>
+  <script src="./script/product.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+</html>

@@ -1,0 +1,298 @@
+#parent {
+  width: 60%;
+  height: 500px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  height: 100%;
+  align-items: start;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+input {
+  padding: 12px;
+  margin-top: 8px;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+#btn {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  width: 200px;
+  padding: 12px;
+  background: rgb(7, 196, 7);
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  justify-self: center;
+  cursor: pointer;
+}
+input:focus {
+  background: rgba(240, 46, 170, 0.4);
+}
+#btn:hover {
+  background: rgb(5, 170, 5);
+  color: white;
+}
+label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.display {
+  /* width: 100%;
+        height: 200px; */
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  /* text-align: center; */
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+/* Product Display Styles */
+#productData {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  margin-top: 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.product-box {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(240, 46, 170, 0.1),
+    rgba(46, 213, 240, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+
+.product-box:hover::before {
+  opacity: 1;
+}
+
+.product-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 3px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+*/ .product-box h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.product-box h3:first-child {
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    rgba(240, 46, 170, 0.9),
+    rgba(240, 46, 170, 0.7)
+  );
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: -25px -25px 20px -25px;
+  border-radius: 20px 20px 0 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.product-box p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.product-box p:first-of-type {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.15rem;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 15px 0;
+}
+
+.product-box p:nth-of-type(2) {
+  color: #ffffff;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 8px 15px;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 10px 0;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.product-box p:nth-of-type(3) {
+  color: #ffffff;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 10px 0;
+  box-shadow: 0 3px 10px rgba(243, 156, 18, 0.3);
+}
+
+/* Category and Description styling */
+.product-box h3:nth-of-type(3) {
+  background: linear-gradient(
+    135deg,
+    rgba(240, 46, 170, 0.2),
+    rgba(46, 213, 240, 0.2)
+  );
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: rgba(240, 46, 170, 0.9);
+  display: inline-block;
+  margin: 15px 0;
+  border: 2px solid rgba(240, 46, 170, 0.3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-box h3:nth-of-type(2) {
+  color: #555;
+  font-size: 1.05rem;
+  font-weight: normal;
+  line-height: 1.6;
+  margin: 20px 0;
+  padding: 15px;
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  border-left: 5px solid rgba(240, 46, 170, 0.6);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #productData {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .product-box {
+    padding: 20px;
+  }
+
+  .product-box img {
+    height: 180px;
+  }
+
+  .product-box h3:first-child {
+    font-size: 1.3rem;
+    margin: -20px -20px 15px -20px;
+  }
+
+  .product-box p:nth-of-type(2) {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #productData {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .product-box {
+    padding: 15px;
+  }
+
+  .product-box img {
+    height: 150px;
+  }
+
+  .product-box h3:first-child {
+    font-size: 1.2rem;
+    margin: -15px -15px 10px -15px;
+  }
+
+  .product-box p:nth-of-type(2) {
+    font-size: 1.1rem;
+  }
+
+  .product-box h3:nth-of-type(3) {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
